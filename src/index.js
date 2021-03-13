@@ -37,7 +37,6 @@ app.post('/users', (request, response) => {
 
 app.get('/todos', checksExistsUserAccount, (request, response) => {
     const { user } = request;
-    console.log(user);
     return response.send(user.todos);
 });
 
